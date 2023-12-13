@@ -14,11 +14,15 @@ import java.util.List;
 @Table(name = "department")
 public class department {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="deptCode")
     private long deptCode;
     @Column(name="deptName")
     private String deptName;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_dept_id",referencedColumnName = "deptCode")
+    private List<employee> employees;
 
 
 

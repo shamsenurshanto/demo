@@ -18,7 +18,7 @@ public class controllerEmplyoee {
     @Autowired
    private EmployeeRepository employeeRepository;
 @GetMapping("name")
-    public List<employee> getValueemp(){
+    public List<department> getValueemp(){
         return employeeRepository.findAll();
         //
     }

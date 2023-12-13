@@ -24,8 +24,8 @@ public class employee {
     @Column(name="email_Name")
     private String email;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_emp_id",referencedColumnName = "emp_id")
-    private List<department> departments;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "fk_emp_id",referencedColumnName = "emp_id")
+//    private List<department> departments;
 
 }

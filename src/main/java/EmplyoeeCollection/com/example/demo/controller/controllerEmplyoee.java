@@ -16,12 +16,12 @@ public class controllerEmplyoee {
     @Autowired
    private EmployeeRepository employeeRepository;
 @GetMapping("name")
-    public List<employee> getValueemp(){
+    public List<department> getValueemp(){
         return employeeRepository.findAll();
     }
 
     @PostMapping("add")
-    public ResponseEntity<String> postData(@RequestBody employee data) {
+    public ResponseEntity<String> postData(@RequestBody department data) {
 
         employeeRepository.save(data);
         return ResponseEntity.ok("Data received successfully");
