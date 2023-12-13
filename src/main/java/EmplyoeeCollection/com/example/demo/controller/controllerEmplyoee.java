@@ -19,7 +19,7 @@ public class controllerEmplyoee {
     public List<department> getValueemp(){
         return employeeRepository.findAll();
     }
-
+//push
     @PostMapping("add")
     public ResponseEntity<String> postData(@RequestBody department data) {
 
